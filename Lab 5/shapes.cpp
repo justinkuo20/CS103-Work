@@ -8,9 +8,11 @@ using namespace std;
 unsigned char image[SIZE][SIZE];
 
 // Fill in this function:
+//draw rectangle function
 void draw_rectangle(int top, int left, int height, int width) {
     for(int i=0;i<height;i++){
         for(int j=0;j<width;j++){
+            //checks if inputs are within grid
            if (i == 0||i == height-1||j == 0||j == width-1){
                if((i+top <= 256) && (j+left <= 256) && (i+top >= 0) && (j+left >= 0)){
                   image[i+top][j+left] = 0;
@@ -24,6 +26,7 @@ void draw_rectangle(int top, int left, int height, int width) {
 
 void draw_ellipse(int cy, int cx, int height, int width) {
    for(double theta=0.0;theta<2*M_PI; theta += 0.01) {
+       //formula to find x and y coordinates of ellipse
        double x = (width/2)*cos(theta);
        double y = (height/2)*sin(theta);
        if((x + cx <= 256) && (y + cy <= 256) && (x + cx >= 0) && (y + cy >= 0)){
