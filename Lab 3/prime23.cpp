@@ -10,17 +10,18 @@ int main() {
     cout << "Enter a positive integer: " << flush;
 	cin >> num;
 
-	if(num % 2 == 0) {
-		while(num % 2 == 0){
-		twoFactors++;
-		num /= 2;
-        }
+    //checks if number is a factor of two
+    if(num % 2 == 0) {
+    	while(num % 2 == 0){
+	     twoFactors++;
+	     num /= 2;
+             }
 	}
-
-	if(num % 3 == 0) {
-		while(num % 3 == 0) {
-		threeFactors++;
-		num /= 3;
+    //checks if number is a factor of three
+    if(num % 3 == 0) {
+	while(num % 3 == 0) {
+	     threeFactors++;
+	     num /= 3;
 		}
 	}
 
