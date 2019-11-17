@@ -66,6 +66,7 @@ char** read_maze(char* filename, int* rows, int* cols)
     for(int i=0;i<*rows;i++){
         for(int j=0;j<*cols;j++){
             inputFile >> maze[i][j];
+           //checks for invalid characters in the maze
             if(maze[i][j] != '#' && maze[i][j] != 'S' && 
                maze[i][j] != 'F' && maze[i][j] != '.'){
                     return NULL;
