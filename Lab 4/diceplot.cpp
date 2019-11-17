@@ -3,13 +3,14 @@
 #include <ctime>
 using namespace std;
 
-
+//simulates a dice roll
 int roll() {
     int diceRoll;
     diceRoll = rand() % 6 + 1;
     return diceRoll;
  }
 
+//function that prints a histogram of the result of a number of rolls
 void printHistogram(int counts [21]) {
     for(int i=0;i<21;i++){
         cout << i + 4 << ":";
@@ -29,6 +30,8 @@ int main () {
 */
 
 /*
+
+//test of roll function
 int main() {
     
     //cout << roll() << endl;
