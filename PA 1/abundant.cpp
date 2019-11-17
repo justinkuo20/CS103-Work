@@ -45,15 +45,18 @@ int main()
 	int num;
 	int temp = 1;
 
+	//reads in numbers until 0
 	while (cin >> num) {
 		if (num == 0) {
 			break;
 		}
+		//calcuates abundances of number
 		for (int i = 1; i < num; i++) {
 			if (num % i == 0) {
 				sum += i;
 			}
 		}
+		//ranks numbers based on their abundances
 		if (sum > num) {
 			num_abundant++;
 			if (temp == 1) {
