@@ -27,10 +27,14 @@ int main()
     }
 	cout << "Values: " << red << " " << green << " " << blue << endl;
     
+    //calculates value for white
     double white1 = max((double)red/255, (double)green/255);
     double white2 = max((double)white1, (double)blue/255);
-                        
+    
+    //calculates value for cyan using values of white
     double cyan = (white2 - (double)red/255)/white2;
+
+    //calcualtes value for magenta, yellow, and black	
     double magenta = (white2 - (double)green/255)/white2;
     double yellow = (white2 - (double)blue/255)/white2;
     double black = 1 - white2;
