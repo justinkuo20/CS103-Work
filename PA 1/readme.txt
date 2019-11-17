@@ -18,21 +18,19 @@ If none, say "none".
 
 ================================ Questions ==================================
 
-1. I used a while loop because the number of inputs is unknown, so the best way to iterate through was using a for loop.
-   
+1. 
+   If only "int" type was used for the input, then the maximum number of commas needed would be 3.
+
+2.   
+   Yes, I had to implement a special case for the input of zero because my algorithm would not have outputted 0.
+
+3.
+   The most challenging part for me was isolating each digit, but I eventually figured that out by dividing the number by 10 to the power of 1 minus the number of digits. Using that number, I then did temp % 10, which would give me each digit.
 
 
-2. In order to find the proper divisors for a single input, I used a for loop because a for loop allows the divisor to increment each time.
 
-   
-3. 
-   The first idiom that I used was the divisibilty/factor idiom because in order to find the abundance, the divisors of a number need to be found,    then added together. This was used in my for loop, where I found each sum.
-
-   One idiom that I used was the swapping idiom, since that was required in order to be able to rank the top 3 abundances.
-
-   Another idiom that I used was the shifting values idiom. This is used when a number was found to be greater than the one already stored, so the    new sum had to overwrite a previous sum. This was used in my program each time when a later value was found to be larger than one that was in  t    he n1-n3 variables.
-    
-    
+4. 
+    I did not use the programming idioms, but having looked over them now, I think the isolating digits idiom would have at least helped me get a better idea of how to isolate each digit, since that was the part I had the most trouble with.
 
 
 ================================ Remarks ====================================
