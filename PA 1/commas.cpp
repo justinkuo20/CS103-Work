@@ -53,14 +53,11 @@ int main() {
 	if (firstCase == 0) {
 		firstCase = 3;
 	}
+	//inserts commas based on position of digit
 	for (int i = numDigits - 1; i >= 0; i--) {
-        //cout << "N : " << n << endl;
-		temp = n;
-        //cout << "temp before: " << temp<< endl;
+		temp = n;       
 		long long nextDigit = pow(10, i);
 		temp /= nextDigit;
-        //cout << "nextDigit: "<< nextDigit<< endl;
-        //cout << "temp: "<< temp << endl;
 		temp = temp % 10;
 		if (firstCase > 0) {
 			cout << temp;
