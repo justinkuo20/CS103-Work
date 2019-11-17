@@ -55,6 +55,7 @@ void shuffle(int cards[]) {
  */
 void printCard(int id) {
 	/******** You complete ****************/
+	//prints card id
 	if (id%13 == 0) {
 		cout << "2-";
 	}
@@ -190,19 +191,24 @@ int main(int argc, char *argv[]) {
             cards[i] = i;
         }
         shuffle(cards);
+	 //deals hands
         for(int i=0; i<2;i++){
             phand[i] = cards[i*2];
             dhand[i] = cards[i*2+1];
         }
+	//print out dealers' hand
         cout << "Dealer: ? ";
         printCard(dhand[1]);
         cout << endl;
+	//prints out players' hand
         cout << "Player: ";
         printHand(phand, sizeOfPhand);
-            
+          
+	//player can choose to hit or stay if their score is under 21   
         while(getBestScore(phand, sizeOfPhand) < 21) {
             cout << "Type 'h' to hit and 's' to stay: ";
             cin >> choice;
+ 	     //adds card if hit
             if(choice == 'h') {
                 phand[sizeOfPhand] = cards[2 + sizeOfPhand];
                 sizeOfPhand++;
@@ -212,8 +218,7 @@ int main(int argc, char *argv[]) {
                 break;
             }
         }
-       // cout << getBestScore(phand, sizeOfPhand) << endl;
-            
+        //busts if score is greater than 21    
         if(getBestScore(phand, sizeOfPhand) > 21) {
             cout << "Player busts " << endl;
             cout << "Lose " << getBestScore(phand, sizeOfPhand) << " ";
@@ -224,6 +229,7 @@ int main(int argc, char *argv[]) {
 				sizeOfDhand++;
 			}
          
+		
          cout << "Dealer: ";
          printHand(dhand, sizeOfDhand);
          cout << endl;
